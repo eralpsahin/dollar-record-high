@@ -4,9 +4,14 @@
  * Module dependencies.
  */
 
-const debug = require('debug')('boilerplate');
+const debug = require('debug')('drh:server');
 const http = require('http');
 const app = require('../app');
+
+/**
+ * Start Exchange Rate Request scheduler.
+ */
+require('../retrieve');
 
 const port = '3000';
 app.set('port', port);
